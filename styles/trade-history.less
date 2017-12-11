@@ -1,0 +1,67 @@
+@import "variables";
+@import "ui-variables";
+
+@trade-history-header-height: 32px;
+@trade-history-border-width: 1px;
+@trade-history-border-color: #444;
+
+.trade-history
+{
+    display: flex;
+    flex-direction: column;
+
+    .thead
+    {
+        height: @trade-history-header-height;
+        line-height: @trade-history-header-height - @trade-history-border-width;
+        text-align: right;
+
+        &:first-child
+        {
+            border-bottom: @trade-history-border-width solid @trade-history-border-color;
+        }
+
+        &:last-child
+        {
+            border-top: @trade-history-border-width solid @trade-history-border-color;
+        }
+    }
+
+    .tbody
+    {
+        flex: 1;
+        overflow: auto;
+    }
+
+    .via-table
+    {
+        min-height: 100px;
+
+        .td
+        {
+            font-size: 13px;
+            font-weight: 700;
+            font-family: Inconsolata;
+            color: #555;
+            text-align: right;
+
+            span
+            {
+                color: #FFF;
+            }
+        }
+        
+        .td.price
+        {
+            &.buy
+            {
+                color: @primary-color-up;
+            }
+
+            &.sell
+            {
+                color: @primary-color-down;
+            }
+        }
+    }
+}

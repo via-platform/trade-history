@@ -1,6 +1,6 @@
 {
   "name": "trade-history",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Trade history.",
   "main": "./lib/main",
   "scripts": {
@@ -11,14 +11,15 @@
     "trading",
     "watchlist"
   ],
-  "repository": "https://bitbucket.org/via-trading/trade-history",
+  "repository": "https://github.com/via-platform/trade-history",
   "author": "Dakota Gordon",
   "engines": {
     "via": "*"
   },
   "dependencies": {
-    "via-table": "^0.12.5",
-    "underscore-plus": "^1.6.6"
+    "etch": "^0.12.7",
+    "moment": "^2.19.4",
+    "via-table": "^0.12.5"
   },
   "configSchema": {}
 }
