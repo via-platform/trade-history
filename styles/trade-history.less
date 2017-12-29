@@ -1,20 +1,29 @@
 @import "variables";
 @import "ui-variables";
 
-@trade-history-header-height: 32px;
+@trade-history-header-height: 33px;
 @trade-history-border-width: 1px;
-@trade-history-border-color: #444;
+@trade-history-border-color: #181818;
 
 .trade-history
 {
     display: flex;
     flex-direction: column;
 
+    .symbol
+    {
+        cursor: default;
+
+        &:hover
+        {
+            color: @primary-color;
+        }
+    }
+
     .thead
     {
         height: @trade-history-header-height;
         line-height: @trade-history-header-height - @trade-history-border-width;
-        text-align: right;
 
         &:first-child
         {
@@ -44,23 +53,24 @@
             font-family: Inconsolata;
             color: #555;
             text-align: right;
+            padding: 0 10px;
 
             span
             {
                 color: #FFF;
             }
         }
-        
+
         .td.price
         {
             &.buy
             {
-                color: @primary-color-up;
+                color: @primary-color-down;
             }
 
             &.sell
             {
-                color: @primary-color-down;
+                color: @primary-color-up;
             }
         }
     }
