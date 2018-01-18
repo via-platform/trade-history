@@ -20,7 +20,7 @@
   "dependencies": {
     "etch": "^0.12.7",
     "moment": "^2.19.4",
-    "via-table": "^0.0.1"
+    "via-table": "^0.0.2"
   },
   "configSchema": {},
   "consumedServices": {
