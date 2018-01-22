@@ -1,7 +1,7 @@
 @import "variables";
 @import "ui-variables";
 
-@trade-history-header-height: 33px;
+@trade-history-header-height: 24px;
 @trade-history-border-width: 1px;
 @trade-history-border-color: #181818;
 
@@ -22,18 +22,8 @@
 
     .thead
     {
-        height: @trade-history-header-height;
-        line-height: @trade-history-header-height - @trade-history-border-width;
-
-        &:first-child
-        {
-            border-bottom: @trade-history-border-width solid @trade-history-border-color;
-        }
-
-        &:last-child
-        {
-            border-top: @trade-history-border-width solid @trade-history-border-color;
-        }
+        height: @trade-history-header-height + 1;
+        line-height: @trade-history-header-height;
     }
 
     .tbody
