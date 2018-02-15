@@ -3,46 +3,67 @@
 
 @trade-history-header-height: 24px;
 @trade-history-border-width: 1px;
-@trade-history-border-color: #181818;
 
 .trade-history
 {
     display: flex;
     flex-direction: column;
 
-    .symbol
+    .thead
     {
-        cursor: default;
+        display: flex;
+        height: @trade-history-header-height + 1;
+        line-height: @trade-history-header-height;
+        background: @header-background-color;
+        border-bottom: 1px solid @header-border-color;
 
-        &:hover
+        .th
         {
-            color: @primary-color;
+            flex: 1;
+            font-size: 11px;
+            // font-weight: 700;
+            font-family: @font-family;
+            color: @text-color-subtle;
+            padding: 0 10px;
+            text-align: right;
         }
     }
 
-    .thead
-    {
-        height: @trade-history-header-height + 1;
-        line-height: @trade-history-header-height;
-    }
-
-    .tbody
+    .trade-history-table
     {
         flex: 1;
         overflow: auto;
     }
 
+    .scale-bar
+    {
+        background-color: fade(@primary-color-up, 60%);
+        min-width: 2px;
+        height: 18px;
+
+        &.buy
+        {
+            background-color: fade(@primary-color-down, 60%);
+        }
+    }
+
     .via-table
     {
         min-height: 100px;
-        background-color: @pane-content-background-color;
+        background-color: @pane-background-color;
+        padding-top: 4px;
+
+        .tr
+        {
+            height: 18px;
+        }
 
         .td
         {
             font-size: 13px;
             font-weight: 700;
-            font-family: Inconsolata;
-            color: #555;
+            font-family: @font-family-serif;
+            color: fade(@text-color-subtle, 40%);
             text-align: right;
             padding: 0 10px;
 
@@ -54,15 +75,20 @@
 
         .td.price
         {
-            &.buy
+            &.sell
             {
                 color: @primary-color-up;
             }
 
-            &.sell
+            &.buy
             {
                 color: @primary-color-down;
             }
+        }
+
+        .td.scale
+        {
+            padding: 0;
         }
     }
 }
