@@ -1,0 +1,11 @@
+'menu': [
+  {
+    'label': 'View'
+    'submenu': [
+      'label': 'Components'
+      'submenu': [
+        { 'label': 'Trade History', 'command': 'trade-history:create-trade-history' }
+      ]
+    ]
+  }
+]
