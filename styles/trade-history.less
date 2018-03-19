@@ -1,9 +1,6 @@
 @import "variables";
 @import "ui-variables";
 
-@trade-history-header-height: 24px;
-@trade-history-border-width: 1px;
-
 .trade-history
 {
     display: flex;
@@ -12,27 +9,29 @@
     .thead
     {
         display: flex;
-        height: @trade-history-header-height + 1;
-        line-height: @trade-history-header-height;
-        background: @header-background-color;
         border-bottom: 1px solid @header-border-color;
+        background: @header-background-color;
 
-        .th
+        .td
         {
+            line-height: 24px;
             flex: 1;
             font-size: 11px;
-            // font-weight: 700;
-            font-family: @font-family;
             color: @text-color-subtle;
             padding: 0 10px;
             text-align: right;
-        }
-    }
 
-    .trade-history-table
-    {
-        flex: 1;
-        overflow: auto;
+            &:first-child
+            {
+                text-align: left;
+                flex: 0.7;
+            }
+
+            &:last-child
+            {
+                border-right: 0;
+            }
+        }
     }
 
     .scale-bar
@@ -40,6 +39,9 @@
         background-color: fade(@primary-color-up, 60%);
         min-width: 2px;
         height: 18px;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         &.buy
         {
@@ -47,29 +49,37 @@
         }
     }
 
-    .via-table
+    .trade-history-table
     {
-        min-height: 100px;
         background-color: @pane-background-color;
-        padding-top: 4px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
 
-        .tr
+        .tbody
         {
-            height: 18px;
-        }
+            padding: 2px 0;
+            overflow: auto;
+            flex: 1;
 
-        .td
-        {
-            font-size: 13px;
-            font-weight: 700;
-            font-family: @font-family-serif;
-            color: fade(@text-color-subtle, 40%);
-            text-align: right;
-            padding: 0 10px;
-
-            span
+            .td
             {
-                color: #FFF;
+                font-size: 13px;
+                font-weight: 700;
+                font-family: @font-family-serif;
+                color: fade(@text-color-subtle, 40%);
+                text-align: right;
+                padding: 0 10px;
+
+                span
+                {
+                    color: #FFF;
+                }
+            }
+
+            .tr
+            {
+                height: 18px;
             }
         }
 
@@ -88,7 +98,8 @@
 
         .td.scale
         {
-            padding: 0;
+            position: relative;
+            flex: 0.7;
         }
     }
 }

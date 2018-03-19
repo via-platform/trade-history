@@ -1,33 +1,33 @@
 {
-  "name": "trade-history",
-  "version": "0.3.2",
-  "description": "Trade history.",
-  "main": "./lib/main",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "via",
-    "trading",
-    "trade",
-    "history"
-  ],
-  "repository": "https://github.com/via-platform/trade-history",
-  "author": "Dakota Gordon",
-  "engines": {
-    "via": "*"
-  },
-  "dependencies": {
-    "etch": "^0.12.7",
-    "moment": "^2.19.4",
-    "via-table": "^0.0.2"
-  },
-  "configSchema": {},
-  "consumedServices": {
-    "action-bar": {
-      "versions": {
-        "^0.1.0": "consumeActionBar"
-      }
+    "name": "trade-history",
+    "version": "0.3.2",
+    "description": "Trade history.",
+    "main": "./lib/main",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "via",
+        "trading",
+        "trade",
+        "history"
+    ],
+    "repository": "https://github.com/via-platform/trade-history",
+    "author": "Dakota Gordon",
+    "engines": {
+        "via": "^0.5.7-alpha"
+    },
+    "dependencies": {
+        "etch": "^0.12.7",
+        "moment": "^2.19.4",
+        "via-table": "^0.1.0"
+    },
+    "configSchema": {},
+    "consumedServices": {
+        "action-bar": {
+            "versions": {
+                "^0.1.0": "consumeActionBar"
+            }
+        }
     }
-  }
 }

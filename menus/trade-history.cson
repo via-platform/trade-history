@@ -9,3 +9,9 @@
     ]
   }
 ]
+
+'context-menu':
+  '.symbol-explorer .market': [
+    {label: 'Open Trade History', command: 'trade-history:create-trade-history'}
+  ]
+
