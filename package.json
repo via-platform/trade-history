@@ -29,6 +29,9 @@
       "default": 100
     }
   },
+  "deserializers": {
+    "TradeHistory": "deserialize"
+  },
   "consumedServices": {
     "action-bar": {
       "versions": {
