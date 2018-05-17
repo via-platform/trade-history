@@ -1,6 +1,6 @@
 {
   "name": "trade-history",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "Trade history.",
   "main": "./lib/main",
   "scripts": {
