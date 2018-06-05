@@ -20,7 +20,7 @@
   "dependencies": {
     "etch": "^0.12.7",
     "moment": "^2.19.4",
-    "via-table": "^0.2.3"
+    "via-table": "^0.2.4"
   },
   "configSchema": {
     "numberOfTrades": {
