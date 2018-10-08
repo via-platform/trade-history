@@ -14,4 +14,7 @@
   '.symbol-explorer .market': [
     {label: 'Open Trade History', command: 'trade-history:create-trade-history'}
   ]
+  '.watchlist .market': [
+    {label: 'Open Trade History', command: 'trade-history:create-trade-history'}
+  ]
 
